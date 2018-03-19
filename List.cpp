@@ -91,5 +91,30 @@ void List::remove(int k)
 	num_elements--;
 	}
 	
-	//Implementations of missing operations
 	
+	//Implementations of missing operations
+	int List::get(int k)
+	{
+		Node* tmp = frontPtr;
+		
+		for(int i = 0; i <= num_elements; i++)
+		{
+			if (k == 1)
+			{
+				return tmp -> data;
+			}
+			else
+			{
+				tmp = tmp -> link;
+			}
+		}
+		return 0;
+	}
+	
+	void List :: clear()
+	{
+		while(num_elements !=0)
+		{
+				remove (1);
+		}
+	}
